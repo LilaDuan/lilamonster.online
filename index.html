@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D28ZL22WK2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-D28ZL22WK2');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monster Survivors - Thrilling Online Survival Game</title>
@@ -58,6 +67,38 @@
             }
         }
     </style>
+    <style>
+        .bg-gradient {
+            background: linear-gradient(135deg, #0072ff 0%, #00c6ff 100%);
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .btn-glow {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 122, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
+            }
+        }
+        .game-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+    </style>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -81,25 +122,25 @@
 </head>
 <body class="bg-apple-lightGray font-sans text-gray-800">
     <!-- Header -->
-    <header class="bg-white shadow">
-        <div class="content-area py-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-apple-blue">Monster Survivors</h1>
-            <p class="mt-2 text-xl text-gray-600">Survive endless waves of monsters, level up, and become the ultimate survivor!</p>
+    <header class="bg-gradient shadow-lg">
+        <div class="content-area py-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-white text-shadow">Monster Survivors</h1>
+            <p class="mt-2 text-xl text-white text-opacity-90">Survive endless waves of monsters, level up, and become the ultimate survivor!</p>
         </div>
     </header>
 
     <!-- Game Section -->
-    <section class="content-area my-8">
-        <div class="bg-white rounded-lg shadow-lg p-4">
-            <div class="game-container mx-auto">
+    <section class="content-area my-12">
+        <div class="bg-white rounded-xl shadow-xl p-6 game-shadow card-hover">
+            <div class="game-container mx-auto rounded-lg overflow-hidden">
                 <iframe src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
-                       class="w-full h-full border-0 rounded-md"
+                       class="w-full h-full border-0"
                        title="Monster Survivors Game"
                        loading="lazy"
                        allowfullscreen></iframe>
             </div>
-            <div class="text-center mt-4">
-                <button class="bg-apple-blue hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+            <div class="text-center mt-6">
+                <button class="bg-apple-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 btn-glow">
                     Play Fullscreen
                 </button>
             </div>
@@ -107,15 +148,15 @@
     </section>
 
     <!-- Game Details -->
-    <section class="content-area my-12">
-        <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-            <h2 class="text-3xl font-bold text-apple-blue mb-6">About Monster Survivors</h2>
-            <p class="text-lg mb-6">
+    <section class="content-area my-16">
+        <div class="bg-white rounded-xl shadow-xl p-8 md:p-10 card-hover">
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 text-shadow">About Monster Survivors</h2>
+            <p class="text-lg mb-8 leading-relaxed">
                 Monster Survivors is an engaging survival game where you face relentless waves of monsters in a dynamic, ever-changing battlefield. As time progresses, the challenge intensifies, testing your strategy and reflexes to their limits.
             </p>
             
-            <h2 class="text-3xl font-bold text-apple-blue mb-4 mt-8">Game Features</h2>
-            <ul class="list-disc ml-6 space-y-2 text-lg">
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 mt-10 text-shadow">Game Features</h2>
+            <ul class="list-disc ml-6 space-y-3 text-lg">
                 <li>Endless survival gameplay with increasing difficulty</li>
                 <li>Diverse monster types with unique behaviors and attacks</li>
                 <li>Multiple character classes with distinct abilities</li>
@@ -125,10 +166,10 @@
                 <li>Progressive character evolution as you survive longer</li>
             </ul>
             
-            <h2 class="text-3xl font-bold text-apple-blue mb-4 mt-8">How to Play</h2>
-            <div class="space-y-4 text-lg">
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 mt-10 text-shadow">How to Play</h2>
+            <div class="space-y-4 text-lg leading-relaxed">
                 <p>
-                    Use the <span class="bg-gray-200 px-2 py-1 rounded">WASD</span> keys or arrow keys to move your character. As you move around, your character will automatically attack nearby monsters.
+                    Use the <span class="bg-gray-200 px-3 py-1 rounded-full">WASD</span> keys or arrow keys to move your character. As you move around, your character will automatically attack nearby monsters.
                 </p>
                 <p>
                     Collect experience gems dropped by defeated monsters to level up. Each time you level up, you'll be presented with a choice of power-ups or weapons that can dramatically change your gameplay strategy.
@@ -138,8 +179,8 @@
                 </p>
             </div>
             
-            <h2 class="text-3xl font-bold text-apple-blue mb-4 mt-8">Tips for Success</h2>
-            <ul class="list-disc ml-6 space-y-2 text-lg">
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 mt-10 text-shadow">Tips for Success</h2>
+            <ul class="list-disc ml-6 space-y-3 text-lg">
                 <li>Keep moving to avoid being surrounded by monsters</li>
                 <li>Prioritize power-ups that complement your character's strengths</li>
                 <li>Don't ignore defensive upgrades - they become crucial in later waves</li>
@@ -148,24 +189,24 @@
                 <li>Treasure chests contain rare and powerful items - always try to grab them</li>
             </ul>
             
-            <h2 class="text-3xl font-bold text-apple-blue mb-4 mt-8">Game Controls</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
-                <div class="bg-apple-lightGray p-4 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2">Movement</h3>
-                    <ul class="space-y-1">
-                        <li><span class="font-bold">W/↑</span>: Move Up</li>
-                        <li><span class="font-bold">A/←</span>: Move Left</li>
-                        <li><span class="font-bold">S/↓</span>: Move Down</li>
-                        <li><span class="font-bold">D/→</span>: Move Right</li>
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 mt-10 text-shadow">Game Controls</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg">
+                <div class="bg-gradient bg-opacity-10 p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-xl mb-4 text-apple-blue">Movement</h3>
+                    <ul class="space-y-2">
+                        <li><span class="font-bold bg-white px-3 py-1 rounded-lg inline-block min-w-[40px] text-center mr-2">W/↑</span> Move Up</li>
+                        <li><span class="font-bold bg-white px-3 py-1 rounded-lg inline-block min-w-[40px] text-center mr-2">A/←</span> Move Left</li>
+                        <li><span class="font-bold bg-white px-3 py-1 rounded-lg inline-block min-w-[40px] text-center mr-2">S/↓</span> Move Down</li>
+                        <li><span class="font-bold bg-white px-3 py-1 rounded-lg inline-block min-w-[40px] text-center mr-2">D/→</span> Move Right</li>
                     </ul>
                 </div>
-                <div class="bg-apple-lightGray p-4 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2">Other Controls</h3>
-                    <ul class="space-y-1">
-                        <li><span class="font-bold">Space</span>: Use Special Ability</li>
-                        <li><span class="font-bold">ESC</span>: Pause Game</li>
-                        <li><span class="font-bold">1-4</span>: Quick Select Items</li>
-                        <li><span class="font-bold">Tab</span>: View Stats</li>
+                <div class="bg-gradient bg-opacity-10 p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-xl mb-4 text-apple-blue">Other Controls</h3>
+                    <ul class="space-y-2">
+                        <li><span class="font-bold bg-white px-3 py-1 rounded-lg inline-block min-w-[70px] text-center mr-2">Space</span> Use Special Ability</li>
+                        <li><span class="font-bold bg-white px-3 py-1 rounded-lg inline-block min-w-[70px] text-center mr-2">ESC</span> Pause Game</li>
+                        <li><span class="font-bold bg-white px-3 py-1 rounded-lg inline-block min-w-[70px] text-center mr-2">1-4</span> Quick Select Items</li>
+                        <li><span class="font-bold bg-white px-3 py-1 rounded-lg inline-block min-w-[70px] text-center mr-2">Tab</span> View Stats</li>
                     </ul>
                 </div>
             </div>
@@ -173,16 +214,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-12">
-        <div class="content-area py-8">
+    <footer class="bg-gradient text-white border-t border-blue-400 mt-16">
+        <div class="content-area py-10">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
+                <div class="mb-6 md:mb-0">
                     <p>&copy; 2025 Monster Survivors. All rights reserved.</p>
                 </div>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#" class="text-apple-blue hover:underline">Privacy Policy</a>
-                    <a href="#" class="text-apple-blue hover:underline">Terms of Service</a>
-                    <a href="#" class="text-apple-blue hover:underline">Contact</a>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="text-white hover:text-blue-200 transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition duration-300">Contact</a>
                 </div>
             </div>
         </div>
